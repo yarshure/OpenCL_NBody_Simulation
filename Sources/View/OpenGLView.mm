@@ -268,7 +268,7 @@ static const NSOpenGLPixelFormatAttribute kOpenGLAttribsLegacyDefault[4] =
         {
             mpContext = [self openGLContext];
             bIsValid  = mpContext != nil;
-            
+            [self setWantsBestResolutionOpenGLSurface:YES];
             mpOptions = [[NSDictionary dictionaryWithObject:@(YES)
                                                      forKey:NSFullScreenModeSetting] retain];
             
@@ -378,6 +378,8 @@ static const NSOpenGLPixelFormatAttribute kOpenGLAttribsLegacyDefault[4] =
 - (void) reshape
 {
     [self _resize];
+//    NSRect backRect = [self convertRectToBacking:bounds];
+//       glViewport(0, 0, NSWidth(bounds), NSHeight(backRect));
 } // reshape
 
 - (void) drawRect:(NSRect)dirtyRect

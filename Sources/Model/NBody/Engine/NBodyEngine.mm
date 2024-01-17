@@ -161,35 +161,35 @@ static const size_t kMeterDefaultMaxCPUUsage = 100;
     
     mpVisualizer->draw(pPosition);
     
-    // Update and render the performance meters
-    mpMeters.index = NBody::eNBodyMeterFrames;
-    mpMeters.point = NSMakePoint(208.0f, 160.0f);
-    
-    [mpMeters update];
-    [mpMeters draw];
-    
-    mpMeters.index = NBody::eNBodyMeterCPU;
-    mpMeters.point = NSMakePoint(208.0f + 0.25f * _size.width, 160.0f);
-
-    [mpMeters update];
-    [mpMeters draw];
-    
-    mpMeters.index = NBody::eNBodyMeterUpdates;
-    mpMeters.point = NSMakePoint(0.75f * _size.width - 208.0f, 160.0f);
-    mpMeters.value = mpMediator->updates();
-    
-    [mpMeters update];
-    [mpMeters draw];
-    
-    mpMeters.index = NBody::eNBodyMeterPerf;
-    mpMeters.point = NSMakePoint(_size.width - 208.0f, 160.0f);
-    mpMeters.value = mpMediator->performance();
-    
-    [mpMeters update];
-    [mpMeters draw];
-    
-    // Draw the button(s) in the dock
-    [mpButtons draw];
+//    // Update and render the performance meters
+//    mpMeters.index = NBody::eNBodyMeterFrames;
+//    mpMeters.point = NSMakePoint(208.0f, 160.0f);
+//    
+//    [mpMeters update];
+//    [mpMeters draw];
+//    
+//    mpMeters.index = NBody::eNBodyMeterCPU;
+//    mpMeters.point = NSMakePoint(208.0f + 0.25f * _size.width, 160.0f);
+//
+//    [mpMeters update];
+//    [mpMeters draw];
+//    
+//    mpMeters.index = NBody::eNBodyMeterUpdates;
+//    mpMeters.point = NSMakePoint(0.75f * _size.width - 208.0f, 160.0f);
+//    mpMeters.value = mpMediator->updates();
+//    
+//    [mpMeters update];
+//    [mpMeters draw];
+//    
+//    mpMeters.index = NBody::eNBodyMeterPerf;
+//    mpMeters.point = NSMakePoint(_size.width - 208.0f, 160.0f);
+//    mpMeters.value = mpMediator->performance();
+//    
+//    [mpMeters update];
+//    [mpMeters draw];
+//    
+//    // Draw the button(s) in the dock
+//    [mpButtons draw];
 } // _drawScene
 
 - (void) _setDemo:(const GLuint)activeDemo
@@ -267,28 +267,28 @@ static const size_t kMeterDefaultMaxCPUUsage = 100;
 
 - (BOOL) _newDock:(const size_t)count
 {
-    mpButtons = [[NBodyButtons alloc] initWithCount:count];
-    
-    if(mpButtons)
-    {
-        size_t i;
-        
-        for(i = 0; i < count; ++i)
-        {
-            mpButtons.index = i;
-            mpButtons.label = mpMediator->label(NBody::Simulation::Types(i));
-            mpButtons.size  = _size;
-            
-            if(![mpButtons acquire])
-            {
-                return NO;
-            } // if
-        } // for
-        
-        mpButtons.index = 0;
-        
-        return YES;
-    } // if
+//    mpButtons = [[NBodyButtons alloc] initWithCount:count];
+//    
+//    if(mpButtons)
+//    {
+//        size_t i;
+//        
+//        for(i = 0; i < count; ++i)
+//        {
+//            mpButtons.index = i;
+//          //  mpButtons.label = mpMediator->label(NBody::Simulation::Types(i));
+//            mpButtons.size  = _size;
+//            
+//            if(![mpButtons acquire])
+//            {
+//                return NO;
+//            } // if
+//        } // for
+//        
+//        mpButtons.index = 0;
+//        
+//        return YES;
+//    } // if
     
     return NO;
 } // _newDock

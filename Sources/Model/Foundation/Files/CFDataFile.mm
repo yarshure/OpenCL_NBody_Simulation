@@ -32,7 +32,7 @@ void DataFile::initialize(const char& nTerminator,
     {
         mnTerminator = nTerminator;
         mnLength     = std::strlen(mpBuffer);
-        mpBufferPos  = (char* )std::strchr(mpBuffer, mnTerminator);
+        mpBufferPos  = (char*)std::strchr(mpBuffer, mnTerminator);
         
         std::vector<size_t> vec = readline<size_t>();
         

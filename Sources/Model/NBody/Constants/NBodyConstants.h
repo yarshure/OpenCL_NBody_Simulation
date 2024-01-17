@@ -46,8 +46,8 @@ namespace NBody
     
     namespace Window
     {
-        const GLfloat kWidth  = 800.0f;
-        const GLfloat kHeight = 500.0f;
+        const GLfloat kWidth  = 1280.0f*2.0;
+        const GLfloat kHeight = 720.0f*2.0;
     }; // Defaults
     
     namespace Particles

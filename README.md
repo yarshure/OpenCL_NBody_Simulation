@@ -13,4 +13,3 @@ EL Capitan (OS X 10.11) and Xcode 7.1
 EL Capitan (OS X 10.11)
 
 Copyright (C) 2015 Apple Inc. All rights reserved.
-# OpenCL_NBody_Simulation
